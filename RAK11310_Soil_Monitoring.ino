@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include "LoRaWan-Arduino.h"  //http://librarymanager/All#SX126x
 #include <SPI.h>
-#include <Wire.h>  //for battery detect
+#include <Wire.h> 
 #include <stdio.h>
 
 #include "mbed.h"
@@ -42,10 +42,10 @@ static lmh_callback_t g_lora_callbacks = { BoardGetBatteryLevel, BoardGetUniqueI
                                            lorawan_rx_handler, lorawan_has_joined_handler,
                                            lorawan_confirm_class_handler, lorawan_join_failed_handler,
                                            lorawan_unconf_finished, lorawan_conf_finished };
-//OTAA keys !!!! KEYS ARE MSB !!!!
-uint8_t nodeDeviceEUI[8] = { 0xAC, 0x1F, 0x09, 0xFF, 0xFE, 0x06, 0xB7, 0xE4 };
+//OTAA keys !!!! KEYS ARE MSB !!!! REPLACE WITH OWN KEYS FROM TTN
+uint8_t nodeDeviceEUI[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 uint8_t nodeAppEUI[8] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
-uint8_t nodeAppKey[16] = { 0x42, 0xA2, 0x08, 0x17, 0xD8, 0x32, 0x72, 0xA9, 0xDD, 0xB0, 0xF2, 0xF1, 0xB4, 0xB2, 0x62, 0xD8 };
+uint8_t nodeAppKey[16] = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
 
 // ABP keys
 uint32_t nodeDevAddr = 0x260116F8;
