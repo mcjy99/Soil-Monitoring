@@ -1,4 +1,5 @@
-//latest version from github, old example not working
+//Basic soil monitoring system using RAK11310 and RAK12035
+//OTAA latest version from github, old example not working
 #include <Arduino.h>
 #include "LoRaWan-Arduino.h"  //http://librarymanager/All#SX126x
 #include <SPI.h>
